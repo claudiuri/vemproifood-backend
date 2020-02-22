@@ -1,6 +1,7 @@
 const qs = require('qs');
 const express = require('express');
-const { getTempAndGenre } = require('./controllers/OpenWeatherMap');
+const { getTempAndGenre } = require('./controllers/OpenWeatherMapController');
+const { getTracks } = require('./controllers/SpotifyController');
 const app = express();
 
 app.use("/", async (req, res) => {
@@ -18,8 +19,10 @@ app.use("/", async (req, res) => {
 	try {
 
 		const { temp, genre } = await getTempAndGenre(search);
+		
+		const tracks = await getTracks(genre);
 
-		res.send({ temp, genre })
+		res.send({ temp, genre, tracks })
 
 	} catch (error) {
 		
