@@ -1,0 +1,14 @@
+{
+  "name": "vemproifood-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/claudiuri/vemproifood-backend.git",
+  "author": "Cláudio Yuri <claudio.y07@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
