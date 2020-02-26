@@ -3,7 +3,7 @@ const axios = require('axios');
 const getGenreByTemp = (temperature) =>{
 
     if(temperature > 30) {
-        return 'paty'
+        return 'party'
 
     } else if(temperature > 14 && temperature < 31) {
 

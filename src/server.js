@@ -1,8 +1,14 @@
 const qs = require('qs');
 const express = require('express');
+const apm = require('elastic-apm-node');
 const { getTempAndGenre } = require('./controllers/OpenWeatherMapController');
 const { getTracks } = require('./controllers/SpotifyController');
 const app = express();
+
+apm.start({
+	serviceName: 'NodeApp',
+	serverUrl: 'http://10.96.145.224:8200'
+});
 
 app.use("/", async (req, res) => {
 
@@ -35,4 +41,4 @@ app.use("/", async (req, res) => {
 	}
 });
 
-app.listen(1001, () => console.log("Servidor on")) 
+app.listen(3000, () => console.log("Servidor on")) 

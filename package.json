@@ -5,13 +5,14 @@
   "repository": "https://github.com/claudiuri/vemproifood-backend.git",
   "author": "Cláudio Yuri <claudio.y07@gmail.com>",
   "license": "MIT",
-  "scripts":{
+  "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
+    "elastic-apm-node": "^3.4.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
